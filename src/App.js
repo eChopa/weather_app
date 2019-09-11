@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { UserPosition } from './components/Weather/WeatherHeader'
+import { UserPosition } from './components/Weather/UserPosition'
 import { UserWeather } from "./components/Weather/UserWeather";
 
 
