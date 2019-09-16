@@ -5,9 +5,10 @@ export const UserPosition = ({setWeatherData}) => {
     const [isLaoding, setLoading] = useState(false)
     const [weather, setWeather] = useState(null)
     const [location, setLocation] = useState({status: null, result: null})
+    const  appId = ''
     const getPosition = (location) => {
         setLocation({status: 1, result: location.coords})
-        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${location.coords.latitude}&lon=${location.coords.longitude}&units=metric&appid=3696ca63f35355477b35ab7745017dfc`)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${location.coords.latitude}&lon=${location.coords.longitude}&units=metric&appid=${appId}`)
             .then(checkFetchRequestHTTP)
             .then(response => response.json())
             .then(data => {
